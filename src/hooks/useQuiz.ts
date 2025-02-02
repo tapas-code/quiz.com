@@ -146,9 +146,15 @@ export function useQuiz() {
     }
   }, [quizData, quizState.isComplete]);
 
+  const API_BASE_URL =
+  import.meta.env.MODE === 'development'
+    ? '/api'  // Uses the Vite proxy in dev
+    : 'https://api.jsonserve.com';  // Direct API call in production
+
   const fetchQuizData = async () => {
     try {
-      const response = await fetch("/api/Uw5CrX");
+      const response = await fetch(`${API_BASE_URL}/Uw5CrX`);
+      console.log('Fetching data from: ', API_BASE_URL);
       if (!response.ok) throw new Error("Failed to fetch quiz data");
       const data = await response.json();
       setQuizData(data);
