@@ -149,7 +149,7 @@ export function useQuiz() {
   const API_BASE_URL =
   import.meta.env.MODE === 'development'
     ? '/api'  // Uses the Vite proxy in dev
-    : 'https://api.jsonserve.com';  // Direct API call in production
+    : 'https://corsproxy.io/?https://api.jsonserve.coms';  // Direct API call in production
 
   const fetchQuizData = async () => {
     try {
