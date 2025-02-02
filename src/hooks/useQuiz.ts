@@ -158,7 +158,7 @@ export function useQuiz() {
       if (!response.ok) throw new Error("Failed to fetch quiz data");
       const data = await response.json();
       
-      const fetchedQuizData = import.meta.env.MODE === 'development' ? data : data.contents;
+      const fetchedQuizData = import.meta.env.MODE === 'development' ? data : data.contents.json();
       console.log("Fetched Data: ", fetchedQuizData);
       
       setQuizData(fetchedQuizData);
