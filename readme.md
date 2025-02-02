@@ -58,6 +58,9 @@ A web-based quiz application with gamification features, fetching quiz data from
 The app is deployed on **Netlify**. You can access it here:
 👉 **[Live Demo](https://quiz-asgn.netlify.app/)**
 
+## 📹 Demo Video
+🎥 **Watch the demo here:** 👉 **[Video Link](https://youtu.be/9aGcq4SxTWI)**
+
 ## 🛠️ Configuration
 The API URL is handled dynamically to support both development and production:
 ```tsx
