@@ -163,7 +163,7 @@ export function useQuiz() {
       setQuizData(fetchedQuizData);
       setQuizState((prev) => ({
         ...prev,
-        selectedAnswers: new Array(mockQuizData.questions_count).fill(null),
+        selectedAnswers: new Array(fetchedQuizData.questions_count).fill(null),
         hiddenOptions: {},
         answeredQuestions: {},
       }));
