@@ -159,6 +159,7 @@ export function useQuiz() {
       const data = await response.json();
       
       const fetchedQuizData = import.meta.env.MODE === 'development' ? data : data.contents;
+      console.log("Fetched Data: ", fetchedQuizData);
       
       setQuizData(fetchedQuizData);
       setQuizState((prev) => ({
